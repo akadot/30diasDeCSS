@@ -14,8 +14,8 @@ body {
 }
 
 .container a {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   transform: rotate(-30deg) skew(25deg);
   position: relative;
   transition: 0.2s;
@@ -46,6 +46,9 @@ body {
 }
 .container a span[class*="whatsapp"] {
   background-color: #25d366;
+}
+.container a span[class*="github"] {
+  background-color: #333;
 }
 
 .container a:hover span {
