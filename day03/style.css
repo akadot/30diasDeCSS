@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Press Start 2P", cursive;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.text-section {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.text-section:nth-child(1) {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  background: #000;
+}
+
+.text-section:nth-child(1) p {
+  color: #50fa7b;
+  left: 100%;
+}
+
+.text-content {
+  color: #5c3ec9;
+  white-space: nowrap;
+  position: absolute;
+  font-size: 12em;
+  line-height: 100vh;
+  animation: sliding 20s linear infinite;
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
