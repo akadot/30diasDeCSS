@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Rajdhani", sans-serif;
+  background: #191622;
+  color: transparent;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+}
+
+.container .text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  font-size: 48pt;
+  font-weight: 600;
+}
+
+.container .text span {
+  animation: light 3s linear infinite;
+}
+
+.container .text span:nth-child(1) {
+  animation-delay: 0;
+}
+
+.container .text span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.container .text span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.container .text span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.container .text span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.container .text span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.container .text span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.container .text span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.container .text span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.container .text span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.container .text span:nth-child(11) {
+  animation-delay: 1s;
+}
+
+@keyframes light {
+  0% {
+    color: #f8f8f233;
+    text-shadow: none;
+  }
+  20% {
+    color: #f8f8f2;
+  }
+  40% {
+    text-shadow: 0 0 7px #5c3ec946;
+  }
+  60% {
+    color: #5c3ec9;
+  }
+  80% {
+    color: #5c3ec946;
+    text-shadow: none;
+  }
+  100% {
+    color: transparent;
+    text-shadow: none;
+  }
+}
