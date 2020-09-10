@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #21222c;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.container .content {
+  height: 20%;
+  width: 9.5%;
+  margin: auto;
+  position: relative;
+}
+
+.container .content span:nth-child(1) {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 60px 60px;
+  border-color: transparent transparent #50fa7b transparent;
+
+  animation: toDown 3s linear infinite;
+}
+
+.container .content span:nth-child(2) {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 60px 60px 0 0;
+  border-color: #fff transparent transparent transparent;
+
+  animation: toUp 3s linear infinite;
+}
+
+@keyframes toDown {
+  0% {
+    top: 0;
+    left: 0;
+    transform: scale(1, 1);
+  }
+  8% {
+    top: 16%;
+    left: 0;
+    transform: scale(1, 1);
+  }
+  16% {
+    top: 32%;
+    left: 0;
+    transform: scale(1, 1);
+  }
+  24% {
+    top: 52%;
+    left: 0;
+    transform: scale(1, 1);
+  }
+  32% {
+    top: 52%;
+    left: 16%;
+    transform: scale(-1, -1);
+  }
+  40% {
+    top: 52%;
+    left: 32%;
+    transform: scale(-1, -1);
+  }
+  48% {
+    top: 52%;
+    left: 52%;
+    transform: scale(-1, -1);
+  }
+  56% {
+    top: 32%;
+    left: 52%;
+    transform: scale(-1, -1);
+  }
+  64% {
+    top: 16%;
+    left: 52%;
+    transform: scale(-1, -1);
+  }
+  72% {
+    top: 0;
+    left: 52%;
+    transform: scale(-1, -1);
+  }
+  80% {
+    top: 0;
+    left: 32%;
+    transform: scale(1, 1);
+  }
+  88% {
+    top: 0;
+    left: 16%;
+    transform: scale(1, 1);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes toUp {
+  0% {
+    bottom: 0;
+    right: 0;
+    transform: scale(1, 1);
+  }
+  8% {
+    bottom: 16%;
+    right: 0;
+    transform: scale(1, 1);
+  }
+  16% {
+    bottom: 32%;
+    right: 0;
+    transform: scale(1, 1);
+  }
+  24% {
+    bottom: 52%;
+    right: 0;
+    transform: scale(1, 1);
+  }
+  32% {
+    bottom: 52%;
+    right: 16%;
+    transform: scale(-1, -1);
+  }
+  40% {
+    bottom: 52%;
+    right: 32%;
+    transform: scale(-1, -1);
+  }
+  48% {
+    bottom: 52%;
+    right: 52%;
+    transform: scale(-1, -1);
+  }
+  56% {
+    bottom: 32%;
+    right: 52%;
+    transform: scale(-1, -1);
+  }
+  64% {
+    bottom: 16%;
+    right: 52%;
+    transform: scale(-1, -1);
+  }
+  72% {
+    bottom: 0;
+    right: 52%;
+    transform: scale(-1, -1);
+  }
+  80% {
+    bottom: 0;
+    right: 32%;
+    transform: scale(1, 1);
+  }
+  88% {
+    bottom: 0;
+    right: 16%;
+    transform: scale(1, 1);
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+    transform: scale(1, 1);
+  }
+}
