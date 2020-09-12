@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  font-family: "Press Start 2P", cursive;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32pt;
+  line-height: 1.4;
+  font-weight: bold;
+  background: #191622;
+}
+
+.container p {
+  color: #fff;
+}
+
+.container p::after {
+  content: "";
+  margin: -10px 0 0 50px;
+  vertical-align: middle;
+  animation: change infinite 4s ease-in-out;
+}
+
+@keyframes change {
+  0%,
+  33% {
+    content: "Cool 🤙";
+    color: #ffffa5;
+  }
+  34%,
+  66% {
+    content: "Fun 👾";
+    color: #50fa7b;
+  }
+  67%,
+  100% {
+    content: "Life ❤";
+    color: #5c3ec9;
+  }
+}
