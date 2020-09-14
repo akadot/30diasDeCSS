@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 56pt;
+}
+
+p {
+  color: #ff6e6e81;
+  cursor: pointer;
+  position: relative;
+}
+
+p::before {
+  content: "#30DAYSCSSCHALLENGE";
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  color: #ff6e6e;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+p:hover::before {
+  width: 100%;
+}
