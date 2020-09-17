@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(laughing-man.png);
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: relative;
+}
+
+.container svg {
+  position: absolute;
+  top: -385px;
+  left: -50px;
+  z-index: -1;
+}
+.container svg path {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  fill: transparent;
+  stroke: transparent;
+}
+
+.container svg g text {
+  fill: #004b73;
+  font-size: 2.3px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transform-origin: center;
+  animation: around 8s linear infinite;
+}
+
+@keyframes around {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
