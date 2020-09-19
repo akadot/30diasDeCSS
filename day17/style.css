@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 20px;
+}
+
+.container .card .main {
+  position: relative;
+  color: #fff;
+  padding: 15px;
+  width: 270px;
+  border-radius: 5px 5px 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.container .card .secondary {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgb(233, 233, 233);
+  color: rgb(77, 77, 77);
+  padding: 15px;
+  width: 270px;
+  height: 80px;
+  border-radius: 0 0 5px 5px;
+  transition: 0.3s;
+}
+
+.container .card h1 {
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.container .card p {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.container .card p span {
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.container .card .main .top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.container .card .main img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+}
+
+.red {
+  background: #ff3366;
+}
+.purple {
+  background: #5c3ec9;
+}
+.blue {
+  background: #149ea3;
+}
+
+.red:hover {
+  box-shadow: 0 0 10px 0 #ff3366;
+}
+.purple:hover {
+  box-shadow: 0 0 10px 0 #5c3ec9;
+}
+.blue:hover {
+  box-shadow: 0 0 10px 0 #149ea3;
+}
+
+.main:hover .secondary {
+  animation: slide 0.8s ease-in-out forwards;
+}
+
+@keyframes slide {
+  from {
+    bottom: 0;
+  }
+  to {
+    transform: translateY(75px);
+    box-shadow: 0 0 10px 0 rgb(138, 138, 138);
+  }
+}
