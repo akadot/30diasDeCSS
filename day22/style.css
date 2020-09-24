@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background: #181818;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  font-size: 32pt;
+  font-weight: 900;
+  padding: 20px 40px;
+  background-color: transparent;
+  border: 2px solid #2171b4;
+  color: #2171b4;
+  overflow: hidden;
+  transition: 5s;
+  z-index: 2;
+}
+
+.btn::before {
+  content: url("./wave.png");
+  position: absolute;
+  top: 100px;
+  left: -30%;
+  z-index: -1;
+  width: 30%;
+  height: 30%;
+  transition: 5s;
+}
+
+.btn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn:hover::before {
+  top: -150%;
+  left: -50%;
+}
