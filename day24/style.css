@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #000725;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #040d3e;
+  padding: 20px 60px;
+  color: #fff;
+  border-top: 30px solid #58ffc7;
+  border-left: 3px solid #58ffc7;
+  border-right: 3px solid #58ffc7;
+  border-bottom: 3px solid #58ffc7;
+}
+
+.container h1 {
+  font-weight: 700;
+  font-size: 24pt;
+  border-bottom: 3px solid #fff;
+}
+
+.container .list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 10px;
+  height: 300px;
+}
+
+.container .list span {
+  font-weight: 300;
+  position: relative;
+  transition: 0.5s;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.container .list span::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: translateY(-50%) scale(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.container .list label .check {
+  appearance: none;
+  -moz-appearance: none;
+  position: relative;
+}
+
+.container .list label .check::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.container .list label .check:checked::before {
+  border-top: none;
+  border-right: none;
+  border-color: #58ffc7;
+  height: 10px;
+  width: 20px;
+  transform: rotate(-45deg);
+}
+
+.container .list label .check:checked ~ span::before {
+  transform: translateY(-50%) scale(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.container .list label .check:checked ~ span {
+  color: #293264;
+}
