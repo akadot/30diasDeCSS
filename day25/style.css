@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  position: absolute;
+  opacity: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #1a73e8;
+  font-size: 18pt;
+  font-weight: 500;
+
+  animation: ok 0.5s forwards ease-in-out;
+  animation-delay: 4.5s;
+  animation-play-state: paused;
+}
+
+.container .btn {
+  appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.container .btn::before {
+  content: "Download";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 200px;
+  border-radius: 50px;
+  background: #1a73e8;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18pt;
+  transition: 0.5s;
+}
+
+.container .btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+  width: 0;
+  height: 25px;
+  background: #1a73e8;
+  animation: progress 4s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.container .btn:checked::before {
+  content: "";
+  height: 25px;
+  width: 1000px;
+  background: #e2e2e2;
+}
+
+.container .btn:not(:checked)::after {
+  display: none;
+}
+
+.container .btn:checked + .icon {
+  animation-play-state: running;
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes ok {
+  from {
+    opacity: 0;
+    top: 40%;
+  }
+  to {
+    opacity: 1;
+    top: 38%;
+  }
+}
