@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url("./bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Josefin Sans";
+  font-size: 52pt;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.container span {
+  margin: 0 30px;
+}
+
+.container span:nth-child(2) {
+  margin-left: 90px;
+}
+.container span:nth-child(3) {
+  margin-right: 90px;
+}
+
+.container .circle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin: 0 20px;
+  position: absolute;
+  animation: circleRotate 3s linear infinite;
+}
+
+.container .circle::before {
+  content: "O";
+  position: absolute;
+  left: -30px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.container .circle::after {
+  content: "O";
+  position: absolute;
+  right: -30px;
+  border-radius: 50%;
+  background: #000;
+}
+
+@keyframes circleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
