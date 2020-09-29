@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #e1e1e1;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.menu-list {
+  height: 60px;
+  background: #fff;
+  width: 0;
+  transition: 2s;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu ul li {
+  margin: auto 30px;
+  font-weight: 600;
+  color: #9e9e9e;
+  cursor: pointer;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.menu ul li:hover {
+  color: rgb(73, 188, 255);
+}
+
+.menu ul li::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: transparent;
+  transition: 0.5s;
+}
+
+.menu ul li:hover::before {
+  bottom: -20px;
+  background: rgb(73, 188, 255);
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#menuBtn {
+  appearance: none;
+  height: 0;
+  width: 0;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 80%;
+  left: 10%;
+  background: rgb(73, 188, 255);
+  border-radius: 10px;
+  transform-origin: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn::before {
+  top: 30%;
+}
+
+.btn::after {
+  bottom: 30%;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  background: rgb(14, 166, 255);
+}
+
+#menuBtn:checked + .btn::before {
+  transform: translateY(10px) rotate(50deg);
+  background: rgb(14, 166, 255);
+}
+#menuBtn:checked + .btn::after {
+  transform: translateY(-10px) rotate(-50deg);
+  background: rgb(14, 166, 255);
+}
+
+#menuBtn:checked ~ .menu-list {
+  width: 80%;
+}
+
+#menuBtn:checked ~ .menu-list li {
+  opacity: 1;
+}
+
+@keyframes;
